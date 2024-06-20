@@ -1,0 +1,18 @@
+---
+name: Test
+on:
+  workflow_dispatch:
+    inputs:
+      environment:
+        description: 'Environment'
+        default: 'QA'
+        type: choice
+        options:
+          - USQA
+          - EUQA
+          - USPROD
+          - USDEV
+      branch-or-tag:
+        description: "Branch or Tag name to deploy (examples: 'main', 'feature/sm', 'web-v2023.12.0')"
+        type: string
+        default: main
