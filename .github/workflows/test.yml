@@ -17,8 +17,10 @@ on:
         type: string
         default: main
 
+permissions:
+  deployments: write
+
 jobs:
-  
   test:
     runs-on: ubuntu-latest
     environment: ${{ inputs.environment }}
